@@ -1,2 +1,4 @@
 ---
-# tasks file for ansible-role-install-pip
+- name: install for Debian or Ubuntu
+  include: apt.yml
+  when: ansible_os_family == "Debian" or ansible_os_family == "Ubuntu"
